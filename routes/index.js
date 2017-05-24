@@ -8,4 +8,6 @@ router.get('/', (req,res) => {
 
 router.post('/search', Twitter.search);
 
+router.post('/timeline', Twitter.userTimeline);
+
 module.exports = router;
