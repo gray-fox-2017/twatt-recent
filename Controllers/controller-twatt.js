@@ -22,7 +22,8 @@ function timeline (req,res,next){
         process.env.Access_token_secret,             
         function (e, data){
           if (e) console.error(e);        
-          res.send(data)  
+           res.send(data)
+           //res.send(`On ${data[0].id}\n${data[0].source}`)  
         }); 
       })
     }
