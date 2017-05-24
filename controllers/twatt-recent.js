@@ -5,7 +5,7 @@ module.exports = {
 	timeline : (req, res) => {
 	  modelsRecent.getOauth(oauth => {
 	    oauth.get(
-	      'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='+req.body.user,
+	      'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='+req.body.user+'&count='+req.body.count,
 	      process.env.ACCESS_TOKEN, //test user token
 	      process.env.TOKEN_SECRET, //test user secret
 	      function (e, data){
