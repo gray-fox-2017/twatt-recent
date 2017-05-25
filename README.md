@@ -2,7 +2,7 @@
 API practice app to get home and user twitter timeline using respective user screen name. This app is using two GET API from twitter to gather user's home and timeline.
 
 ## Routes
-List of routes for books:
+List of routes for twatt:
 
 Route | HTTP | Description
 ------|------|------------
