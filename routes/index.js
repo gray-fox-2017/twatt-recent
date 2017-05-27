@@ -3,6 +3,6 @@ var router = express.Router();
 var indexControllers = require('../controllers/indexControllers')
 
 //Send keyword search and get JSON return
-router.get('/:keyword', indexControllers.searchReturn);
+router.get('/:account/:show', indexControllers.recentReturn);
 
 module.exports = router;
