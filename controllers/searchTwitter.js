@@ -34,18 +34,20 @@ let search = ((req,res) => {
 });
 
 let userTimeline = ((req,res) => {
-  let query = req.body.username;
+  //let query = req.body.username;
   oauth.get(
-    `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${query}`,
+    //`https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${query}`,
+    `https://api.twitter.com/1.1/statuses/home_timeline.json`,
     process.env.access_token,
     process.env.access_token_secret,
     (err,data) => {
-      let statusText = [];
-      data = JSON.parse(data);
-      data.forEach(datum => {
-        statusText.push(datum.text);
-      });
-      res.send(statusText);
+      //statusText = [];
+      //data = JSON.parse(data);
+      //data.forEach(datum => {
+      //  statusText.push(datum.text);
+      //});
+      //res.send(statusText);
+      res.send(data);
     });
 });
 
